@@ -3,10 +3,24 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+   /* COLOR */
+  --main-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --text-color: #353430;
+  --title-color: #FFC2E6;
+
+  /* MISC */
+  --bg-image: url(../images/cover-image-light.png);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --text-color: #353430;
+    --title-color: #FFC2E6;
+
+    --bg-image: url(../images/cover-image-light.png);
+  }
 }
