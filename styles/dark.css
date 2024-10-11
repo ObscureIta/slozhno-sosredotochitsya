@@ -9,12 +9,16 @@
   --main-color: #000028;
   --accent-color: #ff0070;
   --text-color: #f1b2ce;
-  --title-color: #db00ff;
-  
+
+  /* TITLE */
+  --main-title-color: #db00ff;
+  --main-title-shadow-color: #ff0070;
+  --title-font-size: 18px;
+  --title-h2-color: #ff0070;
+  --title-h3-h4-color: #000028;
+  /* FONT */
+  --font-size: 18px;
+
   /* MISC */
   --bg-image: url(../images/cover-image-dark.png);
 }
-
-
-
-

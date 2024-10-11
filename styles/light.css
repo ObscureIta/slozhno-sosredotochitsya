@@ -4,11 +4,22 @@
   переключая тему
 */
 .page.theme_light {
-   /* COLOR */
-  --main-color: #FFF1F7;
-  --accent-color: #FF8DCB;
+  /* COLOR */
+  --main-color: #fff1f7;
+  --accent-color: #ff8dcb;
   --text-color: #353430;
-  --title-color: #FFC2E6;
+
+  --header-description: #353430;
+
+  /* TITLE */
+  --main-title-color: #ffc2e6;
+  --main-title-shadow-color: #ff0070;
+  --title-font-size: 18px;
+  --title-h2-color: #353430;
+  --title-h3-h4-color: #353430;
+
+  /* BOTTONS */
+  --button-color: #353430;
 
   /* MISC */
   --bg-image: url(../images/cover-image-light.png);
@@ -16,11 +27,19 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-color: #FFF1F7;
-    --accent-color: #FF8DCB;
+    /* COLOR */
+    --main-color: #fff1f7;
+    --accent-color: #ff8dcb;
     --text-color: #353430;
-    --title-color: #FFC2E6;
 
+    /* TITLE */
+    --main-title-color: #db00ff;
+    --main-title-shadow-color: #ff0070;
+    --title-font-size: 18px;
+    --title-h2-color: #353430;
+    --title-h3-h4-color: #353430;
+
+    /* MISC */
     --bg-image: url(../images/cover-image-light.png);
   }
 }
