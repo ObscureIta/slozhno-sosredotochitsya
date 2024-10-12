@@ -4,15 +4,15 @@
 */
 :root {
   /* COLOR */
-  --main-color: #000028;
-  --accent-color: #ff0070;
-  --text-color: #f1b2ce;
+  --main-color: #fff1f7;
+  --accent-color: #ff8dcb;
+  --text-color: #353430;
 
   /* TITLE */
-  --main-title-color: #db00ff;
+  --main-title-color: #ffc2e6;
   --main-title-shadow-color: #ff0070;
 
-  --title-color: #ff0070;
+  --title-color: #353430;
   --title-decor-color: #000028;
   --title-font-size: 18px;
 
@@ -20,9 +20,9 @@
   --font-size: 18px;
 
   /* BOTTONS */
-  --button-color: #ff0070;
-  --button-hover-color: rgb(100%, 0%, 44%, 0.5);
+  --button-color: #353430;
+  --button-hover-color: rgba(21%, 20%, 19%, 0.5);
 
   /* MISC */
-  --bg-image: url(../images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-light.png);
 }
