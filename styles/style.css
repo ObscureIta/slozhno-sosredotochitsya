@@ -150,8 +150,7 @@
 
 .content__section,
 .section__content-blocks,
-.section__wrapper,
-.block-picture {
+.section__wrapper {
   display: grid;
   gap: 20px;
 }
@@ -160,7 +159,8 @@
   gap: min(13.333vi, 80px);
 }
 
-.section__content-block {
+.section__content-block,
+.block-picture {
   display: grid;
   gap: 10px;
 }
@@ -231,7 +231,7 @@
 
   .content__section:first-of-type,
   .block-text {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 32% auto;
   }
 
   .section-inline {
@@ -247,6 +247,10 @@
 
   .section-inline > .section__content-blocks {
     grid-area: text-block;
+  }
+
+  .block-picture {
+    gap: 20px;
   }
 
   .content-block__pictures {
