@@ -2,13 +2,16 @@
 
 /* GLOBALS */
 .page {
+  display: grid;
+  gap: min(10.667vi, 60px);
   color: var(--text-color);
   font-family: 'IBM Plex mono', sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   font-size: var(--font-size);
   line-height: 1.3em;
   background-color: var(--main-color);
   background-image: var(--bg-image);
+  /* шорткатик не?))))) */
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -17,23 +20,48 @@
   max-inline-size: 1024x;
 }
 
-.title {
-  font-weight: 700;
-  font-size: var(--title-font-size);
+.content-section {
+  padding-inline: min(2.667vi, 20px);
 }
+
+/* TITLE */
+.title {
+  font-weight: bold;
+  font-size: var(--font-size);
+  color: var(--title-color);
+}
+
+.title-decor {
+  color: var(--title-decor-color);
+  background-color: var(--accent-color);
+}
+/* -TITLE */
+
+/* LINKS & BUTTONS*/
+.link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 3px 13px;
+  color: var(--button-color);
+  line-height: 1em;
+  text-transform: lowercase;
+  background-color: transparent;
+}
+/* -LINKS & BUTTONS*/
+/* -GLOBALS */
 
 /* HEADER */
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  width: 100%;
   height: 100vh;
   padding: min(2.666vi, 20px);
-  /* background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 }
 
 .header__decoration-item {
@@ -51,8 +79,8 @@
   content: 'REC';
   position: absolute;
   color: var(--accent-color);
-  inset-inline-end: calc(100% + 10px);
-  inset-block-end: -60%;
+  inset-inline-end: calc(100% + 10.5px);
+  inset-block-end: -70%;
 }
 
 header::after {
@@ -77,16 +105,6 @@ header::before {
   block-size: 25px;
   inset-inline-end: min(2.666vi, 20px);
   inset-block-start: min(2.666vi, 20px);
-}
-
-/* BUTTON */
-.button {
-  border: 1px solid transparent;
-  padding: 3px 13px;
-  color: var(--button-color);
-  line-height: 1em;
-  text-transform: lowercase;
-  background-color: transparent;
 }
 
 .header__theme-menu-list {
@@ -115,65 +133,39 @@ header::before {
   text-shadow: 4px 4px 0 var(--main-title-shadow-color);
 }
 
-.header__description {
+.header__subtitle {
   justify-self: end;
   align-self: center;
-  color: var(--header-description);
-  font-weight: bold;
   line-height: 1.3em;
-  background-color: var(--accent-color);
   inline-size: max(355px, 50%);
 }
+/* -HEADER */
 
 /* CONTENT BLOCKS */
-/* В целом перенастройка сеток */
 .content {
-  padding: min(10.667vi, 60px) min(2.667vi, 20px); /*Требуется адаптив*/
+  display: grid;
+  gap: min(13.334vi, 80px);
 }
 
-.section:not(:first-of-type) {
-  margin-block-start: min(13.334vi, 80px);
-}
-
-/* Отступы секции. Всей секции, обртки контейнеров и самих контейнеров */
-.section,
-.section__content-blocks {
+.content__section,
+.section__content-blocks,
+.section__wrapper {
   display: grid;
   gap: 20px;
 }
 
-.section__content-block {
+.content__section:last-of-type {
+  gap: min(13.333vi, 60px);
+}
+
+.section__content-block,
+.block-picture {
   display: grid;
   gap: 10px;
 }
-
-.section__title {
-  color: var(--title-h2-color);
-}
-
-.content-block__title {
-  color: var(--title-h3-h4-color);
-  background-color: var(--accent-color);
-}
-
-.paragraph__link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.content-block__subtitle {
-  color: var(--title-h3-h4-color);
-  font-weight: normal;
-  background-color: var(--accent-color);
-}
+/* -CONTENT BLOCKS */
 
 /* PICTURES BLOCK */
-.section__pictures-block {
-  margin-block-start: min(13.333vi, 60px);
-  display: grid;
-  gap: 10px;
-}
-
 .content-block__pictures {
   display: grid;
   grid-template-rows: 1fr;
@@ -183,6 +175,7 @@ header::before {
 .picture__item {
   width: 100%;
 }
+/* -PICTURES BLOCK */
 
 /* FOOTER */
 .footer {
@@ -191,7 +184,7 @@ header::before {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 10px;
+  padding: min(2.666vi, 20px);
 }
 
 .footer__title {
@@ -210,8 +203,8 @@ header::before {
   background-color: transparent;
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  inset-inline-start: min(2.666vi, 20px);
+  inset-block-end: min(2.666vi, 20px);
 }
 
 .footer::before {
@@ -222,10 +215,80 @@ header::before {
   background-color: transparent;
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-end: 10px;
-  inset-block-start: 10px;
+  inset-inline-end: min(2.666vi, 20px);
+  inset-block-start: min(2.666vi, 20px);
 }
 
 /* DERECTIVES */
 
+@media (width >= 768px) {
+  .section:first-of-type {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section:last-of-type .content__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content-block__pictures {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    gap: 20px;
+    grid-template-areas:
+      'img-sunset img-sunset img-icecream'
+      'img-tape img-books img-icecream'
+      'img-tape img-street img-street';
+  }
+
+  .picture__item {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .picture__item:nth-child(1) {
+    block-size: 192px;
+    grid-area: img-sunset;
+  }
+  .picture__item:nth-child(2) {
+    block-size: 441px;
+    grid-area: img-icecream;
+  }
+  .picture__item:nth-child(3) {
+    block-size: 568px;
+    grid-area: img-tape;
+  }
+  .picture__item:nth-child(4) {
+    inline-size: 230px;
+    block-size: 230px;
+    grid-area: img-books;
+  }
+  .picture__item:nth-child(5) {
+    block-size: 318px;
+    grid-area: img-street;
+  }
+}
+
 /* ACTIONS */
+.link:focus,
+.header__theme-menu-button {
+  outline: none;
+}
+
+.link:focus-visible {
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
+}
+/* -ACTIONS */

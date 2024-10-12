@@ -13,12 +13,23 @@
   /* TITLE */
   --main-title-color: #db00ff;
   --main-title-shadow-color: #ff0070;
+
+  --title-color: #ff0070;
+  --title-decor-color: #000028;
   --title-font-size: 18px;
-  --title-h2-color: #ff0070;
-  --title-h3-h4-color: #000028;
+
   /* FONT */
   --font-size: 18px;
 
+  /* BOTTONS */
+  --button-color: #ff0070;
+  --button-hover-color: rgb(100%, 0%, 44%, 0.5);
+
   /* MISC */
   --bg-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .header__decoration-item,
+.theme_dark .header__decoration-item::before {
+  display: block;
 }
