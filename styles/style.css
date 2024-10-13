@@ -64,8 +64,7 @@ footer {
 /* -LINKS & BUTTONS*/
 
 /* DECRATIVE ELEMENTS */
-.header::after,
-.footer::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   border-inline-start: 1px solid var(--decorate-color);
@@ -77,8 +76,7 @@ footer {
   inset-block-end: min(2.666vi, 20px);
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before {
   content: '';
   position: absolute;
   border-inline-end: 1px solid var(--decorate-color);
@@ -308,7 +306,7 @@ footer {
 }
 
 .link:focus-visible {
-  border: 1px solid var(--decorate-color);
+  border: 1px solid var(--text-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -316,7 +314,7 @@ footer {
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--decorate-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .header__theme-menu-button:hover {
